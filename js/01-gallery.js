@@ -19,7 +19,7 @@ galleryItems.forEach((item) => {
 });
 
 galleryContainer.addEventListener("click", (event) => {
-    event.preventDefault();
+  event.preventDefault();
   if (event.target.classList.contains("gallery__image")) {
     const galleryOpen = basicLightbox.create(`
     <img src="${event.target.getAttribute(
@@ -27,13 +27,12 @@ galleryContainer.addEventListener("click", (event) => {
     )}" alt="${event.target.getAttribute("alt")}" />
   `);
 
-      galleryOpen.show();
-      document.addEventListener("keydown", (event) => {
-        console.log(event.key);
-        if (event.key === "Escape") {
-          galleryOpen.close();
-        }
-      });
+    galleryOpen.show();
+    document.addEventListener("keydown", (event) => {
+      console.log(event.key);
+      if (event.key === "Escape") {
+        galleryOpen.close();
+      }
+    });
   }
 });
-
