@@ -28,11 +28,6 @@ galleryContainer.addEventListener("click", (event) => {
   `);
 
     galleryOpen.show();
-    document.addEventListener("keydown", (event) => {
-      console.log(event.key);
-      if (event.key === "Escape") {
-        galleryOpen.close();
-      }
-    });
+    
   }
 });
